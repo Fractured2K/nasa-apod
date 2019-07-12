@@ -54,7 +54,7 @@ function App() {
 		const monthMax = 12;
 		let month = Math.floor(
 			Math.random() * (+monthMax - +monthMin) + +monthMin
-		); // generate random year
+		); // generate random month
 
 		month = month.toString().padStart(2, '0')
 
@@ -66,7 +66,7 @@ function App() {
 		let maxDay = days(month, yearYear);
 		const day = Math.floor(
 			Math.random() * (+maxDay - +minDay) + +minDay
-		); // generate random year
+		); // generate random day
 
 		axios.get(`${baseUrl}&date=${yearYear}-${month}-${day}`)
 			.then(response => setState(response.data))
